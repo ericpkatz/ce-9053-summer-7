@@ -4,11 +4,13 @@
   "description": ",-----.,--.                  ,--. ,---.   ,--.,------.  ,------.     '  .--./|  | ,---. ,--.,--. ,-|  || o   \\  |  ||  .-.  \\ |  .---'     |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \\  :|  `--,      '  '--'\\|  |' '-' ''  ''  '\\ `-' | .'  /   |  ||  '--'  /|  `---.      `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'     -----------------------------------------------------------------",
   "main": "index.js",
   "dependencies": {
-    "jasmine-node": "^1.14.5"
+    "jasmine-node": "^1.14.5",
+    "mongoose": "^4.0.6",
+    "q": "^1.4.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test":"jasmine-node spec/ --captureExceptions --autotest --watch */*.js --color"
+    "test": "jasmine-node spec/ --captureExceptions --autotest --watch */*.js --color --verbose"
   },
   "repository": {
     "type": "git",
