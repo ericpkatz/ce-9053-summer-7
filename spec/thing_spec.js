@@ -58,4 +58,18 @@ describe("Thing", function(){
           expect(name).toEqual("Rock"); 
        }) 
     });
+    
+    describe("creating a thing that exists", function(){
+        var error;
+        beforeEach(function(done){
+            var badRock = new Thing({name: "Rock"});
+            badRock.save(function(e, x){
+                error = e;
+                done();
+            });
+        });
+       it("returns an error", function(){
+           expect(error).not.toEqual(null);
+       }); 
+    });
 });
