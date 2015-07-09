@@ -13,3 +13,7 @@ html
                 
         .container 
             .well People Page 
+            ul.list-group
+                each person in people
+                    li.list-group-item
+                        = person.name
