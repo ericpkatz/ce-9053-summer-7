@@ -24,7 +24,10 @@ app.get("/people", function(req, res){
 });
 
 app.get("/things", function(req, res){
-    res.render("things");
+    Thing.find()
+        .then(function(things){
+            res.render("things", { things: things})
+        });
 });
 
 app.listen(process.env.PORT);
