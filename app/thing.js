@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var thingSchema = mongoose.Schema({
-    name: {type: String, unique: true}
+    name: {required: true, type: String, unique: true}
 });
 
 var Thing = mongoose.model("thing", thingSchema);

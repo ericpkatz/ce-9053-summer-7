@@ -72,4 +72,17 @@ describe("Thing", function(){
            expect(error).not.toEqual(null);
        }); 
     });
+    describe("creating a thing with no name", function(){
+        var error;
+        beforeEach(function(done){
+            var badRock = new Thing({});
+            badRock.save(function(e, x){
+                error = e;
+                done();
+            });
+        });
+       it("returns an error", function(){
+           expect(error).not.toEqual(null);
+       }); 
+    });
 });
